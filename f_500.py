@@ -4856,6 +4856,7 @@ def pop_from_list(any_list):
 
 assert pop_from_list([1, 2, 3, 4, 'find_schumacher_podiums']) == [1, 2, 3, 4]
 
+
 # 501
 # create function that takes tuple and return count method of number 3
 
@@ -4865,6 +4866,7 @@ def tuple_count(any_tuple):
 
 
 assert tuple_count((1, 2, 3, 3, 3)) == 3
+
 
 # 502
 # create function that takes tuple and return index for index method for number 3 in range (3, 5)
@@ -4879,6 +4881,7 @@ assert tuple_index_check((1, 2, 4, 1, 3, 3, 14, 3)) == 4
 set1 = {1, 2, 3}
 set2 = {3, 4, 5, 100, 999999}
 
+
 # 503
 # create function that takes set and add element to it using add method
 
@@ -4887,8 +4890,10 @@ def add_element_to_set_(any_set, element):
     any_set.add(element)
     return any_set
 
+
 # print(add_element_to_set_(set1, 10))
 assert add_element_to_set_(set1, 10) == {10, 1, 2, 3}
+
 
 # 504
 # remove method for set
@@ -4897,8 +4902,10 @@ def remove_element_set(any_set, element):
     any_set.remove(element)
     return any_set
 
+
 # print(remove_element_set(set1, 10))
 assert remove_element_set(set1, 10) == {1, 2, 3}
+
 
 # 505
 # discard method for set
@@ -4907,8 +4914,10 @@ def discard_element_set(any_set, element):
     any_set.discard(element)
     return any_set
 
+
 # print(discard_element_set(set1, 1))
 assert discard_element_set(set1, 1) == {2, 3}
+
 
 # 506
 # update method for set
@@ -4917,8 +4926,10 @@ def update_set(any_set, any_list):
     any_set.update(any_list)
     return any_set
 
+
 # print(update_set(set1, [1, 2, 3, 5, 60, 70, 800, 9, 10]))
 assert update_set(set1, [1, 2, 3, 5, 60, 70, 800, 9, 10]) == {800, 1, 2, 3, 5, 70, 9, 10, 60}
+
 
 # 507
 # copy method for set
@@ -4926,8 +4937,10 @@ assert update_set(set1, [1, 2, 3, 5, 60, 70, 800, 9, 10]) == {800, 1, 2, 3, 5, 7
 def copy_set(any_set):
     return set(any_set.copy())
 
+
 # print(copy_set(set1))
 assert copy_set(set1) == {800, 1, 2, 3, 5, 70, 9, 10, 60}
+
 
 # 508
 # union method for set
@@ -4935,8 +4948,10 @@ assert copy_set(set1) == {800, 1, 2, 3, 5, 70, 9, 10, 60}
 def union_set(any_set, any_set_2):
     return any_set.union(any_set_2)
 
+
 # print(union_set(set1, set2))
 assert union_set(set1, set2) == {800, 1, 2, 3, 100, 5, 70, 4, 9, 10, 60, 999999}
+
 
 # 509
 # union method short |
@@ -4944,8 +4959,10 @@ assert union_set(set1, set2) == {800, 1, 2, 3, 100, 5, 70, 4, 9, 10, 60, 999999}
 def union_set_2(any_set, any_set_2):
     return any_set | any_set_2
 
+
 # print(union_set_2(set1, set2))
 assert union_set_2(set1, set2) == {800, 1, 2, 3, 100, 5, 70, 4, 9, 10, 60, 999999}
+
 
 # 510
 # intersection method
@@ -4953,8 +4970,10 @@ assert union_set_2(set1, set2) == {800, 1, 2, 3, 100, 5, 70, 4, 9, 10, 60, 99999
 def intersection_set(any_set, any_set_2):
     return any_set.intersection(any_set_2)
 
+
 # print(intersection_set(set1, set2))
 assert intersection_set(set1, set2) == {3, 5}
+
 
 # 511
 # intersection method short &
@@ -4962,8 +4981,10 @@ assert intersection_set(set1, set2) == {3, 5}
 def intersection_set_2(any_set, any_set_2):
     return any_set & any_set_2
 
+
 # print(intersection_set_2(set1, set2))
 assert intersection_set_2(set1, set2) == {3, 5}
+
 
 # 512
 # difference method
@@ -4971,8 +4992,10 @@ assert intersection_set_2(set1, set2) == {3, 5}
 def difference_set(any_set, any_set_2):
     return any_set.difference(any_set_2)
 
+
 # print(difference_set(set1, set2))
 assert difference_set(set1, set2) == {800, 1, 2, 70, 9, 10, 60}
+
 
 # 513
 # difference method - short
@@ -4980,8 +5003,10 @@ assert difference_set(set1, set2) == {800, 1, 2, 70, 9, 10, 60}
 def difference_set_2(any_set, any_set_2):
     return any_set - any_set_2
 
+
 # print(difference_set_2(set1, set2))
 assert difference_set_2(set1, set2) == {800, 1, 2, 70, 9, 10, 60}
+
 
 # 514
 # symmetric difference method for set
@@ -4989,8 +5014,10 @@ assert difference_set_2(set1, set2) == {800, 1, 2, 70, 9, 10, 60}
 def symmetric_difference_set(any_set, any_set_2):
     return any_set.symmetric_difference(any_set_2)
 
+
 # print(symmetric_difference_set({1, 2, 3}, {2, 3, 4}))
 assert symmetric_difference_set({1, 2, 3}, {2, 3, 4}) == {1, 4}
+
 
 # 515
 # symmetric difference method for set
@@ -4998,8 +5025,10 @@ assert symmetric_difference_set({1, 2, 3}, {2, 3, 4}) == {1, 4}
 def symmetric_difference_set_2(any_set, any_set_2):
     return any_set ^ any_set_2
 
+
 # print(symmetric_difference_set_2({1, 2, 3}, {2, 3, 4}))
 assert symmetric_difference_set_2({1, 2, 3}, {2, 3, 4}) == {1, 4}
+
 
 # 515
 # issubset method for set
@@ -5007,8 +5036,10 @@ assert symmetric_difference_set_2({1, 2, 3}, {2, 3, 4}) == {1, 4}
 def issubset_set(any_set, any_set_2):
     return any_set.issubset(any_set_2)
 
+
 # print(issubset_set(set1, set2))
 assert issubset_set(set1, set2) == False
+
 
 # 516
 # intersection_update method for set
@@ -5016,8 +5047,10 @@ assert issubset_set(set1, set2) == False
 def intersection_update(any_set, any_set_2):
     return any_set.intersection(any_set_2)
 
+
 # print(intersection_update(set1, set2))
 assert intersection_update(set1, set2) == {3, 5}
+
 
 # 517
 # intersection_update method for set - short  &=
@@ -5026,8 +5059,10 @@ def intersection_update_2(any_set, any_set_2):
     any_set &= any_set_2
     return any_set
 
+
 # print(intersection_update_2(set1, set2))
 assert intersection_update_2(set1, set2) == {3, 5}
+
 
 # 518
 # symmetric_difference_update method for set - short  ^=
@@ -5036,8 +5071,10 @@ def symmetric_difference_update(any_set, any_set_2):
     any_set ^= any_set_2
     return any_set
 
+
 # print(symmetric_difference_update(set1, set2))
 assert symmetric_difference_update(set1, set2) == {100, 4, 999999}
+
 
 # 519
 # symmetric_difference_update method for set
@@ -5046,8 +5083,10 @@ def symmetric_difference_update_2(any_set, any_set_2):
     any_set.symmetric_difference_update(any_set_2)
     return any_set
 
+
 # print(symmetric_difference_update_2(set1, set2))
 assert symmetric_difference_update_2(set1, set2) == {3, 5}
+
 
 # 520
 # difference_update method for set
@@ -5056,8 +5095,10 @@ def difference_update(any_set, any_set_2):
     any_set.difference_update(any_set_2)
     return any_set
 
+
 # print(difference_update(set1, set2))
 assert difference_update(set1, set2) == set()
+
 
 # 521
 # difference_update method for set short -=
@@ -5066,5 +5107,262 @@ def difference_update_2(any_set, any_set_2):
     any_set -= any_set_2
     return any_set
 
+
 # print(difference_update_2(set1, set2))
 assert difference_update_2(set1, set2) == set()
+
+
+# 522
+# Codewars function
+# Create a method all which takes two params:
+#
+#     a sequence
+#     a function (function pointer in C)
+#
+# and returns true if the function in the params returns true for every element in the sequence.
+# Otherwise, it should return false. If the sequence is empty, it should return true,
+# since technically nothing failed the test.
+#
+# Example
+#
+# all((1, 2, 3, 4, 5), greater_than_9) -> false
+# all((1, 2, 3, 4, 5), less_than_9)    -> True
+
+def _all(seq, fun):
+    return all(map(fun, seq))
+
+
+numbers = [2, 4, 6, 8]
+is_even = lambda x: x % 2 == 0
+assert _all(numbers, is_even) == True
+
+
+# 523
+# the same what # 522 but different way
+
+def _all_2(seq, fun):
+    return all(fun(item) for item in seq)
+
+
+assert _all_2(numbers, is_even) == True
+
+
+# 524
+# Codewars
+#
+# Given an array of Player objects and a position (first position is 1), return the name of the chosen Player.
+# name is a property of Player objects, e.g Player.name
+#
+# Example:
+#
+# duck_duck_goose([a, b, c, d], 1) should return a.name
+# duck_duck_goose([a, b, c, d], 5) should return a.name
+
+def get_player_name(players, position):
+    return players[(position - 1) % len(players)].name
+
+
+class Player:
+    def __init__(self, name):
+        self.name = name
+
+
+players = [Player("Alice"), Player("Bob"), Player("Charlie")]
+
+assert get_player_name(players, 1) == "Alice"
+
+
+# 525
+# create function that takes int and iterable and return index % len(iterable)
+# Example
+# cyclic_index(0, iterable) → 0
+# cyclic_index(1, iterable) → 1
+# cyclic_index(2, iterable) → 2
+# cyclic_index(3, iterable) → 0
+# cyclic_index(4, iterable) → 1
+
+
+def cyclic_index(index, iterable):
+    return index % len(iterable)
+
+
+assert cyclic_index(2, iterable=[0, 1, 2]) == 2
+
+
+# 527
+# Create function that use closure
+
+def outer(name):
+    def inner(city):
+        return f'I am {name} and I come from {city}'
+
+    return inner
+
+
+n_1 = outer('Mike Tyson')
+n_2 = n_1('New York')
+n_3 = n_1('Chicago')
+# print(n_3)
+
+assert n_2 == 'I am Mike Tyson and I come from New York'
+assert n_3 == 'I am Mike Tyson and I come from Chicago'
+
+
+# 528
+# Create function that use closure for simple mathematical operation
+
+def power(base):
+    def inner(exponent):
+        return base ** exponent
+
+    return inner
+
+
+power_2 = power(2)
+power_3 = power_2(3)
+power_4 = power_2(4)
+power_5 = power_2(5)
+
+assert power_3 == 8
+assert power_4 == 16
+assert power_5 == 32
+
+
+# 529
+# Create function that use closure for simple mathematical operation
+
+
+def math_1(num):
+    def inner(a, b):
+        return num * (a + b)
+
+    return inner
+
+
+st = math_1(5)
+sum_1 = st(3, 5)
+sum_2 = st(3, 10)
+
+assert sum_1 == 40
+assert sum_2 == 65
+
+
+# 530
+# Create function that use closure for simple mathematical operation
+
+def math_2(n):
+    def inner(a, b):
+        return (n / a) + b
+
+    return inner
+
+
+st_2 = math_2(2)
+seq = st_2(1, 5)
+seq_1 = st_2(2, 5)
+
+assert seq == 7.0
+assert seq_1 == 6.0
+
+# 531
+# create function that takes string and return string and
+# decorator that change returned string from that funtion
+
+
+def capitalize_str(fn):
+    def inner(name):
+        return fn(name.capitalize())
+    return inner
+
+
+def reverse(fn):
+    def wrapper(text):
+        return fn(text[::-1])
+
+    return wrapper
+
+
+def add_sth(fn):
+    def in_2(txt):
+        return fn(txt) + ' ,you have to go now'
+    return in_2
+
+
+@add_sth
+@reverse
+@capitalize_str
+def say_hi(name):
+    return f'Hi {name}'
+
+
+@capitalize_str
+@reverse
+def say_hello(name):
+    return f'Hello {name}'
+
+a = say_hi('alice')
+b = say_hello('john')
+
+assert a == 'Hi Ecila ,you have to go now'
+assert b == 'Hello nhoJ'
+
+# 532
+# create function that generate list and decorator that modify this list
+
+
+def append_list(fn):
+    def inner(n, c):
+        any_lst = fn(n)
+        any_lst.append(c)
+
+        return any_lst
+    return inner
+
+
+@append_list
+def create_list(n):
+    return list(range(n))
+
+n_lst = create_list(20, 1000)
+# print(n_lst)
+assert n_lst == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1000]
+
+
+# 533
+# the same what 534 but decorator has to be take parameter
+
+def remove_last_element(fn):
+    def inner(n):
+        any_lst = fn(n)
+        any_lst.pop()
+        return any_lst
+    return inner
+
+def extend_list(extra_lst):
+    def decorator(fn):
+        def wrapper(n):
+            any_lst = fn(n)
+            any_lst.extend(extra_lst)
+            return any_lst
+        return wrapper
+    return decorator
+
+
+def append_list(c):
+    def decorator(fn):
+        def wrapper(n):
+            any_lst = fn(n)
+            any_lst.append(c)
+            return any_lst
+        return wrapper
+    return decorator
+
+@remove_last_element
+@extend_list([800, 900])
+@append_list(1000)
+def create_list(n):
+
+    return list(range(n))
+
+n_lst = create_list(20)
+assert n_lst == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1000, 800]
