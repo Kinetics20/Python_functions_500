@@ -481,11 +481,11 @@ dict_2 = {0: 'home_AS_a_Hall', 1: ' John2    ', 2: 'funeral123   ', 3: '88infini
           4: 'compulsive is a bad character treat'}
 
 
-def create_list_from_dict(any_dict):
+def create_list_from_dict_36(any_dict):
     return [item.capitalize() for item in any_dict.values()]
 
 
-assert create_list_from_dict(dict_2) == ['Home_as_a_hall',
+assert create_list_from_dict_36(dict_2) == ['Home_as_a_hall',
                                          ' john2    ',
                                          'Funeral123   ',
                                          '88infinity',
@@ -5266,7 +5266,7 @@ assert seq_1 == 6.0
 
 # 531
 # create function that takes string and return string and
-# decorator that change returned string from that funtion
+# decorator that change returned string from that function
 
 
 def capitalize_str(fn):
@@ -5310,7 +5310,7 @@ assert b == 'Hello nhoJ'
 # create function that generate list and decorator that modify this list
 
 
-def append_list(fn):
+def append_list_1000(fn):
     def inner(n, c):
         any_lst = fn(n)
         any_lst.append(c)
@@ -5319,11 +5319,11 @@ def append_list(fn):
     return inner
 
 
-@append_list
-def create_list(n):
+@append_list_1000
+def create_list_20(n):
     return list(range(n))
 
-n_lst = create_list(20, 1000)
+n_lst = create_list_20(20, 1000)
 # print(n_lst)
 assert n_lst == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1000]
 
@@ -5348,7 +5348,7 @@ def extend_list(extra_lst):
     return decorator
 
 
-def append_list(c):
+def append_list_77(c):
     def decorator(fn):
         def wrapper(n):
             any_lst = fn(n)
@@ -5359,12 +5359,12 @@ def append_list(c):
 
 @remove_last_element
 @extend_list([800, 900])
-@append_list(1000)
-def create_list(n):
+@append_list_77(1000)
+def create_list_77(n):
 
     return list(range(n))
 
-n_lst = create_list(20)
+n_lst = create_list_77(20)
 assert n_lst == [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 1000, 800]
 
 
@@ -5472,11 +5472,11 @@ assert sentence(lambda x: str(x).upper(), 'ala ma kota') == ['ALA MA KOTA']
 # 536
 # the same but 2nd version
 
-def sentence(cb: Callable[[T], R], txt: T) -> R:
+def sentence_222(cb: Callable[[T], R], txt: T) -> R:
     return cb(txt)
 
-assert sentence(lambda x: str(x).upper(), 42) == '42'
-assert sentence(lambda x: str(x).upper(), 'ala ma kota') == 'ALA MA KOTA'
+assert sentence_222(lambda x: str(x).upper(), 42) == '42'
+assert sentence_222(lambda x: str(x).upper(), 'ala ma kota') == 'ALA MA KOTA'
 
 # 537
 # write a simple function that takes 2 parameters and return list, create generic typing
