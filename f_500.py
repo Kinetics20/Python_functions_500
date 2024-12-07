@@ -1,5 +1,5 @@
 # This is a set of 500 pieces python functions
-
+from collections.abc import Sequence
 from math import pi
 
 
@@ -5451,3 +5451,71 @@ def volume_pyramid_without_base(h_pyr):
 
 # print(volume_pyramid_without_base(10))
 assert volume_pyramid_without_base(10) == 3464.1
+
+
+# 535
+# Create function that use in argument lambda function and takes sentence or int
+# and return list in 1st version str in 2nd version
+# use generic typing from typing
+
+from typing import Callable, TypeVar, List
+
+T = TypeVar('T')
+R = TypeVar('R')
+
+def sentence(cb: Callable[[T], R], txt: T) -> List[R]:
+    return [cb(txt)]
+
+assert sentence(lambda x: str(x).upper(), 42) == ['42']
+assert sentence(lambda x: str(x).upper(), 'ala ma kota') == ['ALA MA KOTA']
+
+# 536
+# the same but 2nd version
+
+def sentence(cb: Callable[[T], R], txt: T) -> R:
+    return cb(txt)
+
+assert sentence(lambda x: str(x).upper(), 42) == '42'
+assert sentence(lambda x: str(x).upper(), 'ala ma kota') == 'ALA MA KOTA'
+
+# 537
+# write a simple function that takes 2 parameters and return list, create generic typing
+
+TT = TypeVar('TT', int, str)
+
+def combine_(aa: TT, bb: TT) -> list[TT]:
+    return [aa, bb]
+
+
+res_1 = combine_(1, 2)
+res_2 = combine_('1', '2')
+
+assert res_1 == [1, 2]
+assert res_2 == ['1', '2']
+
+# 538
+# the same what # 537 use sequence protocol during typing
+
+U = TypeVar('U')
+
+def magic(data_77: Sequence[U]) -> U:
+    return data_77[0]
+
+v = magic((3000, 2, 3))
+v_1 = magic((100000, 2))
+v_3 = magic(['Future Branch', 'Westworld'])
+
+assert v == 3000
+assert v_1 == 100000
+assert v_3 == 'Future Branch'
+
+# 539
+# create function that takes unlimited positional parameters and return len from this collection , apply typing
+
+
+def my_max(*args: int) -> int:
+    return len(args)
+
+x = my_max(1, 2, 3, 4, 6, 7)
+
+assert x == 6
